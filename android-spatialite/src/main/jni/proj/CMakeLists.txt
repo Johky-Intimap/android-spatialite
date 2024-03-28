@@ -213,6 +213,6 @@ target_include_directories(proj PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_
 
 target_include_directories(proj PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 
-target_compile_options(proj PRIVATE -DPROJ_DATA="/data/user/0/org.owntracks.android.debug/lib")
+# target_compile_options(proj PRIVATE -DPROJ_DATA="/data/user/0/org.owntracks.android.debug/lib")
 
 
