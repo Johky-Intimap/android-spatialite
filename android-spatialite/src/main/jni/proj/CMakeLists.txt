@@ -213,6 +213,6 @@ target_include_directories(proj PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_
 
 target_include_directories(proj PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 
-target_compile_options(proj PUBLIC -DPROJ_DATA="/data/user/0/com.intimap.spatialtest.spatialite_test/app_flutter")
+# target_compile_options(proj PRIVATE -DPROJ_DATA="/data/user/0/com.intimap.spatialtest.spatialite_test/app_flutter")
 
 
