@@ -11,7 +11,7 @@
 /* #undef ENABLE_LIBXML2 */
 
 /* Should be defined in order to enable MiniZIP support. */
-#define ENABLE_MINIZIP 1
+/* #undef ENABLE_MINIZIP */
 
 /* Should be defined in order to enable RTTOPO support. */
 #define ENABLE_RTTOPO 1
@@ -96,7 +96,7 @@
 #define HAVE_MEMSET 1
 
 /* Define to 1 if you have the <minizip/unzip.h> header file. */
-#define HAVE_MINIZIP_UNZIP_H 1
+/* #undef HAVE_MINIZIP_UNZIP_H */
 
 /* Define to 1 if you have the <proj_api.h> header file. */
 /* #undef HAVE_PROJ_API_H */

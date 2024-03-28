@@ -11,7 +11,7 @@
 /* #undef ENABLE_LIBXML2 */
 
 /* Should be defined in order to enable MiniZIP support. */
-#define ENABLE_MINIZIP 1
+/* #undef ENABLE_MINIZIP */
 
 /* Should be defined in order to enable RTTOPO support. */
 #define ENABLE_RTTOPO 1
