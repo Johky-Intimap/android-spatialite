@@ -336,8 +336,8 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = -lminizip -lrttopo -lproj -lz  -L/usr/lib/x86_64-linux-gnu -lgeos_c
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LIBXML2_CFLAGS = -I/usr/include/libxml2
-LIBXML2_LIBS = -lxml2
+LIBXML2_CFLAGS = 
+LIBXML2_LIBS = 
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
@@ -457,7 +457,7 @@ libspatialite_la_LIBADD = ./gaiaaux/libgaiaaux.la \
 	./topology/libtopology.la ./srsinit/libsrsinit.la \
 	./stored_procedures/libstored_procedures.la \
 	./connection_cache/libconnection_cache.la \
-	./virtualtext/libvirtualtext.la ./wfs/libwfs.la -lxml2 \
+	./virtualtext/libvirtualtext.la ./wfs/libwfs.la  \
 	-lsqlite3 $(am__append_1) $(am__append_2) $(am__append_3)
 libspatialite_la_LDFLAGS = -version-info 9:0:1
 #libspatialite_la_LDFLAGS = -version-info 9:0:1
@@ -470,7 +470,7 @@ mod_spatialite_la_LIBADD = ./gaiaaux/gaiaaux.la ./gaiaexif/gaiaexif.la \
 	./cutter/cutter.la ./topology/topology.la ./srsinit/srsinit.la \
 	./stored_procedures/stored_procedures.la \
 	./connection_cache/connection_cache.la \
-	./virtualtext/virtualtext.la ./wfs/wfs.la -lxml2 \
+	./virtualtext/virtualtext.la ./wfs/wfs.la  \
 	$(am__append_4) $(am__append_5) $(am__append_6)
 mod_spatialite_la_CPPFLAGS = -g -O2  \
 	-I$(top_srcdir)/src/headers -I. -DLOADABLE_EXTENSION

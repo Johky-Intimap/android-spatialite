@@ -315,8 +315,8 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = -lminizip -lrttopo -lproj -lz  -L/usr/lib/x86_64-linux-gnu -lgeos_c
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LIBXML2_CFLAGS = -I/usr/include/libxml2
-LIBXML2_LIBS = -lxml2
+LIBXML2_CFLAGS = 
+LIBXML2_LIBS = 
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
@@ -406,7 +406,7 @@ top_builddir = ../..
 top_srcdir = ../..
 SUBDIRS = flex lemon
 AM_CPPFLAGS = -I$(top_srcdir)/src/headers -g -O2  \
-	-I/usr/include -I/usr/include/libxml2 $(am__empty)
+	-I/usr/include  $(am__empty)
 noinst_LTLIBRARIES = libgaiageo.la gaiageo.la
 GAIAGEO_COMMON_SOURCES = gg_advanced.c \
 	gg_endian.c \
@@ -433,7 +433,7 @@ GAIAGEO_COMMON_SOURCES = gg_advanced.c \
 libgaiageo_la_SOURCES = $(GAIAGEO_COMMON_SOURCES)
 gaiageo_la_SOURCES = $(GAIAGEO_COMMON_SOURCES)
 gaiageo_la_CPPFLAGS = -I$(top_srcdir)/src/headers -I. -g -O2 \
-	 -I/usr/include -I/usr/include/libxml2 -DLOADABLE_EXTENSION
+	 -I/usr/include  -DLOADABLE_EXTENSION
 gaiageo_la_LDFLAGS = -module
 gaiageo_la_LIBTOOLFLAGS = --tag=disable-static
 MOSTLYCLEANFILES = *.gcna *.gcno *.gcda

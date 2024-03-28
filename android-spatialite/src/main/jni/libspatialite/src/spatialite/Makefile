@@ -307,8 +307,8 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = -lminizip -lrttopo -lproj -lz  -L/usr/lib/x86_64-linux-gnu -lgeos_c
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LIBXML2_CFLAGS = -I/usr/include/libxml2
-LIBXML2_LIBS = -lxml2
+LIBXML2_CFLAGS = 
+LIBXML2_LIBS = 
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
@@ -397,7 +397,7 @@ top_build_prefix = ../../
 top_builddir = ../..
 top_srcdir = ../..
 AM_CPPFLAGS = -I$(top_srcdir)/src/headers -g -O2  \
-	-I/usr/include -I/usr/include/libxml2 $(am__empty)
+	-I/usr/include  $(am__empty)
 noinst_LTLIBRARIES = libsplite.la splite.la
 SPATIALITE_COMMON_SOURCES = mbrcache.c \
 	spatialite.c \
@@ -430,7 +430,7 @@ libsplite_la_SOURCES = $(SPATIALITE_COMMON_SOURCES)
 libsplite_la_CFLAGS = -fvisibility=hidden
 splite_la_SOURCES = $(SPATIALITE_COMMON_SOURCES)
 splite_la_CPPFLAGS = -I$(top_srcdir)/src/headers -I. -g -O2 \
-	 -I/usr/include -I/usr/include/libxml2 -DLOADABLE_EXTENSION \
+	 -I/usr/include  -DLOADABLE_EXTENSION \
 	-fvisibility=hidden
 splite_la_LDFLAGS = -module
 splite_la_LIBTOOLFLAGS = --tag=disable-static

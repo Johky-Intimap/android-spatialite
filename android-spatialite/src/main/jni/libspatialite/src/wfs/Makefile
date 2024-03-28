@@ -227,8 +227,8 @@ LDFLAGS =
 LIBOBJS = 
 LIBS = -lminizip -lrttopo -lproj -lz  -L/usr/lib/x86_64-linux-gnu -lgeos_c
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LIBXML2_CFLAGS = -I/usr/include/libxml2
-LIBXML2_LIBS = -lxml2
+LIBXML2_CFLAGS = 
+LIBXML2_LIBS = 
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
@@ -316,12 +316,12 @@ target_alias =
 top_build_prefix = ../../
 top_builddir = ../..
 top_srcdir = ../..
-AM_CPPFLAGS = -g -O2  -I/usr/include/libxml2 \
+AM_CPPFLAGS = -g -O2   \
 	-I$(top_srcdir)/src/headers
 noinst_LTLIBRARIES = libwfs.la wfs.la
 libwfs_la_SOURCES = wfs_in.c
 wfs_la_SOURCES = wfs_in.c
-wfs_la_CPPFLAGS = -g -O2  -I/usr/include/libxml2 \
+wfs_la_CPPFLAGS = -g -O2   \
 	-I$(top_srcdir)/src/headers -I. -DLOADABLE_EXTENSION
 wfs_la_LDFLAGS = -module
 wfs_la_LIBTOOLFLAGS = --tag=disable-static
