@@ -81,5 +81,5 @@ tasks.register("javadoc", Javadoc) {
 
 mavenPublishing {
     publishToMavenCentral(SonatypeHost.DEFAULT, /* automaticRelease */ true)
-    signAllPublications()
+    // signAllPublications()
 }
