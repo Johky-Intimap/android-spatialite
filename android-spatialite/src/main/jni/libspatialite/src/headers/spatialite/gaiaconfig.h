@@ -2,19 +2,19 @@
 /* ./src/headers/spatialite/gaiaconfig.h.in - manually maintained */
 
 /* Should be defined in order to enable GCP support. */
-/* #undef ENABLE_GCP */
+#define ENABLE_GCP 1
 
 /* Should be defined in order to enable GeoPackage support. */
 #define ENABLE_GEOPACKAGE 1
 
 /* Should be defined in order to enable LIBXML2 support. */
-/* #undef ENABLE_LIBXML2 */
+#define ENABLE_LIBXML2 1
 
 /* Should be defined in order to enable MiniZIP support. */
-/* #undef ENABLE_MINIZIP */
+#define ENABLE_MINIZIP 1
 
 /* Should be defined in order to enable RTTOPO support. */
-/* #undef ENABLE_RTTOPO */
+#define ENABLE_RTTOPO 1
 
 /* Should be defined in order to enable GEOS_370 support. */
 #define GEOS_370 1

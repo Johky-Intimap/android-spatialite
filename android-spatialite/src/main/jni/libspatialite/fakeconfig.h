@@ -2,20 +2,18 @@
 /* ./fakeconfig.h.in.  Generated from configure.ac by autoheader.  */
 
 /* Should be defined in order to enable GCP support. */
-/* #undef ENABLE_GCP */
 #define ENABLE_GCP 1
 
 /* Should be defined in order to enable GeoPackage support. */
 #define ENABLE_GEOPACKAGE 1
 
 /* Should be defined in order to enable LIBXML2 support. */
-/* #undef ENABLE_LIBXML2 */
+#define ENABLE_LIBXML2 1
 
 /* Should be defined in order to enable MiniZIP support. */
-/* #undef ENABLE_MINIZIP */
+#define ENABLE_MINIZIP 1
 
 /* Should be defined in order to enable RTTOPO support. */
-/* #undef ENABLE_RTTOPO */
 #define ENABLE_RTTOPO 1
 
 /* Should be defined in order to enable GEOS_3100 support. */
@@ -73,7 +71,7 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the <librttopo.h> header file. */
-/* #undef HAVE_LIBRTTOPO_H */
+#define HAVE_LIBRTTOPO_H 1
 
 /* Define to 1 if you have the `z' library (-lz). */
 #define HAVE_LIBZ 1
@@ -98,7 +96,7 @@
 #define HAVE_MEMSET 1
 
 /* Define to 1 if you have the <minizip/unzip.h> header file. */
-/* #undef HAVE_MINIZIP_UNZIP_H */
+#define HAVE_MINIZIP_UNZIP_H 1
 
 /* Define to 1 if you have the <proj_api.h> header file. */
 /* #undef HAVE_PROJ_API_H */

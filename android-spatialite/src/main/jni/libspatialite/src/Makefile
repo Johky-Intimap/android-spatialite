@@ -292,15 +292,15 @@ am__relativize = \
     dir1=`echo "$$dir1" | sed -e "$$sed_rest"`; \
   done; \
   reldir="$$dir2"
-ACLOCAL = ${SHELL} /build/libspatialite-5.1.0/missing aclocal-1.16
+ACLOCAL = ${SHELL} /home/android/android-spatialite/android-spatialite/src/main/jni/libspatialite/missing aclocal-1.16
 AMTAR = $${TAR-tar}
 AM_DEFAULT_VERBOSITY = 1
 AR = ar
 AS = as
-AUTOCONF = ${SHELL} /build/libspatialite-5.1.0/missing autoconf
-AUTOHEADER = ${SHELL} /build/libspatialite-5.1.0/missing autoheader
-AUTOMAKE = ${SHELL} /build/libspatialite-5.1.0/missing automake-1.16
-AWK = mawk
+AUTOCONF = ${SHELL} /home/android/android-spatialite/android-spatialite/src/main/jni/libspatialite/missing autoconf
+AUTOHEADER = ${SHELL} /home/android/android-spatialite/android-spatialite/src/main/jni/libspatialite/missing autoheader
+AUTOMAKE = ${SHELL} /home/android/android-spatialite/android-spatialite/src/main/jni/libspatialite/missing automake-1.16
+AWK = gawk
 CC = gcc
 CCDEPMODE = depmode=gcc3
 CFLAGS = -g -O2
@@ -322,28 +322,28 @@ ECHO_T =
 EGREP = /usr/bin/grep -E
 EXEEXT = 
 FGREP = /usr/bin/grep -F
-GEOSCONFIG = /usr/local/bin/geos-config
-GEOS_CFLAGS = -I/usr/local/include
-GEOS_LDFLAGS = -L/usr/local/lib
+GEOSCONFIG = /usr/bin/geos-config
+GEOS_CFLAGS = -I/usr/include
+GEOS_LDFLAGS = -L/usr/lib/x86_64-linux-gnu
 GREP = /usr/bin/grep
 INSTALL = /usr/bin/install -c
 INSTALL_DATA = ${INSTALL} -m 644
 INSTALL_PROGRAM = ${INSTALL}
 INSTALL_SCRIPT = ${INSTALL}
 INSTALL_STRIP_PROGRAM = $(install_sh) -c -s
-LD = /usr/bin/ld
+LD = /usr/bin/ld -m elf_x86_64
 LDFLAGS = 
 LIBOBJS = 
-LIBS = -lproj -lz  -L/usr/local/lib -lgeos_c
+LIBS = -lminizip -lrttopo -lproj -lz  -L/usr/lib/x86_64-linux-gnu -lgeos_c
 LIBTOOL = $(SHELL) $(top_builddir)/libtool
-LIBXML2_CFLAGS = 
-LIBXML2_LIBS = 
+LIBXML2_CFLAGS = -I/usr/include/libxml2
+LIBXML2_LIBS = -lxml2
 LIPO = 
 LN_S = ln -s
 LTLIBOBJS = 
 LT_SYS_LIBRARY_PATH = 
 MAINT = #
-MAKEINFO = ${SHELL} /build/libspatialite-5.1.0/missing makeinfo
+MAKEINFO = ${SHELL} /home/android/android-spatialite/android-spatialite/src/main/jni/libspatialite/missing makeinfo
 MANIFEST_TOOL = :
 MKDIR_P = /usr/bin/mkdir -p
 NM = /usr/bin/nm -B
@@ -371,10 +371,10 @@ SQLITE3_CFLAGS =
 SQLITE3_LIBS = -lsqlite3
 STRIP = strip
 VERSION = 5.1.0
-abs_builddir = /build/libspatialite-5.1.0/src
-abs_srcdir = /build/libspatialite-5.1.0/src
-abs_top_builddir = /build/libspatialite-5.1.0
-abs_top_srcdir = /build/libspatialite-5.1.0
+abs_builddir = /home/android/android-spatialite/android-spatialite/src/main/jni/libspatialite/src
+abs_srcdir = /home/android/android-spatialite/android-spatialite/src/main/jni/libspatialite/src
+abs_top_builddir = /home/android/android-spatialite/android-spatialite/src/main/jni/libspatialite
+abs_top_srcdir = /home/android/android-spatialite/android-spatialite/src/main/jni/libspatialite
 ac_ct_AR = ar
 ac_ct_CC = gcc
 ac_ct_CXX = g++
@@ -404,7 +404,7 @@ host_vendor = unknown
 htmldir = ${docdir}
 includedir = ${prefix}/include
 infodir = ${datarootdir}/info
-install_sh = ${SHELL} /build/libspatialite-5.1.0/install-sh
+install_sh = ${SHELL} /home/android/android-spatialite/android-spatialite/src/main/jni/libspatialite/install-sh
 libdir = ${exec_prefix}/lib
 libexecdir = ${exec_prefix}/libexec
 localedir = ${datarootdir}/locale
@@ -457,7 +457,7 @@ libspatialite_la_LIBADD = ./gaiaaux/libgaiaaux.la \
 	./topology/libtopology.la ./srsinit/libsrsinit.la \
 	./stored_procedures/libstored_procedures.la \
 	./connection_cache/libconnection_cache.la \
-	./virtualtext/libvirtualtext.la ./wfs/libwfs.la  \
+	./virtualtext/libvirtualtext.la ./wfs/libwfs.la -lxml2 \
 	-lsqlite3 $(am__append_1) $(am__append_2) $(am__append_3)
 libspatialite_la_LDFLAGS = -version-info 9:0:1
 #libspatialite_la_LDFLAGS = -version-info 9:0:1
@@ -470,7 +470,7 @@ mod_spatialite_la_LIBADD = ./gaiaaux/gaiaaux.la ./gaiaexif/gaiaexif.la \
 	./cutter/cutter.la ./topology/topology.la ./srsinit/srsinit.la \
 	./stored_procedures/stored_procedures.la \
 	./connection_cache/connection_cache.la \
-	./virtualtext/virtualtext.la ./wfs/wfs.la  \
+	./virtualtext/virtualtext.la ./wfs/wfs.la -lxml2 \
 	$(am__append_4) $(am__append_5) $(am__append_6)
 mod_spatialite_la_CPPFLAGS = -g -O2  \
 	-I$(top_srcdir)/src/headers -I. -DLOADABLE_EXTENSION
