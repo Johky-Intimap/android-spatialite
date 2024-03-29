@@ -38,7 +38,7 @@
 #define HAVE_INTTYPES_H 1
 
 /* Define to 1 if you have the <librttopo.h> header file. */
-/* #undef HAVE_LIBRTTOPO_H */
+#define HAVE_LIBRTTOPO_H 1
 
 /* Define to 1 if you have the `sqlite3' library (-lsqlite3). */
 /* #undef HAVE_LIBSQLITE3 */
