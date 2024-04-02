@@ -207,7 +207,7 @@ add_library(proj STATIC src/4D_api.cpp
                         src/iso19111/operation/transformation.cpp
                         src/iso19111/operation/vectorofvaluesparams.cpp)
 
-target_link_libraries(proj librttopo sqlite3)
+target_link_libraries(proj sqlite3)
 
 target_include_directories(proj PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/src>)
 
