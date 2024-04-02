@@ -26,7 +26,7 @@ android {
         externalNativeBuild {
             cmake {
                 // explicitly build libs
-                targets 'sqlite3', 'proj', 'iconv', 'geos', 'librttopo', 'libspatialite', 'android_spatialite'
+                targets 'sqlite3', 'proj', 'librttopo', 'iconv', 'geos', 'libspatialite', 'android_spatialite'
             }
         }
     }

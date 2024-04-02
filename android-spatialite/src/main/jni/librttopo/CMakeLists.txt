@@ -62,13 +62,9 @@ add_library(librttopo STATIC
 )
 
 
-target_link_libraries(librttopo geos_c iconv geos proj)
+target_link_libraries(librttopo)
 
 # Include directories
 target_include_directories(librttopo PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
-target_include_directories(librttopo PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
-target_include_directories(librttopo PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/libcharset/include>)
-target_include_directories(librttopo PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/lib>)
-target_include_directories(librttopo PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>/headers)
-target_include_directories(librttopo PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>/src)
+target_include_directories(librttopo PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/headers>)
 
