@@ -408,7 +408,7 @@ add_library(geos STATIC src/algorithm/Angle.cpp
 
 add_library(geos_c STATIC capi/geos_c.cpp capi/geos_ts_c.cpp)
 
-target_link_libraries(geos_c geos)
+target_link_libraries(geos_c geos librttopo)
 
 target_include_directories(geos PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>)
 

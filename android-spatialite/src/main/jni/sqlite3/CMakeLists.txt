@@ -43,7 +43,7 @@ add_library(android_spatialite SHARED android_database_SQLiteCommon.cpp
     JNIHelp.cpp
     JNIString.cpp)
 
-target_link_libraries(android_spatialite librttopo sqlite3 libspatialite log)
+target_link_libraries(android_spatialite sqlite3 libspatialite librttopo log)
 
 target_include_directories(sqlite3 PUBLIC $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}>)
 
