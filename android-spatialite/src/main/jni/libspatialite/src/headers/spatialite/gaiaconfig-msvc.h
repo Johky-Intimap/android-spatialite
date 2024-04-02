@@ -3,6 +3,7 @@
 
 /* Should be defined in order to enable GCP support. */
 /* #undef ENABLE_GCP */
+#define ENABLE_GCP 1
 
 /* Should be defined in order to enable GeoPackage support. */
 #define ENABLE_GEOPACKAGE 1

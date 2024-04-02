@@ -1,7 +1,7 @@
 /* ./src/headers/spatialite/gaiaconfig.h.in - manually maintained */
 
 /* Should be defined in order to enable GCP support. */
-#undef ENABLE_GCP
+/* #undef ENABLE_GCP */
 
 /* Should be defined in order to enable GeoPackage support. */
 #undef ENABLE_GEOPACKAGE
@@ -13,7 +13,7 @@
 #undef ENABLE_MINIZIP
 
 /* Should be defined in order to enable RTTOPO support. */
-#undef ENABLE_RTTOPO
+/* #undef ENABLE_RTTOPO */
 
 /* Should be defined in order to enable GEOS_370 support. */
 #undef GEOS_370
