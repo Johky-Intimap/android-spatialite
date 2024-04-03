@@ -2602,4 +2602,12 @@ public final class SQLiteDatabase extends SQLiteClosable implements SupportSQLit
         prog.bindAllArgsAsStrings(selectionArgs);
         return prog.simpleQueryForBlobFileDescriptor();
     }
+    
+    
+	public long getLastInsertRowId() {
+        return getThreadSession().getLastInsertRowId();
+    }
+    public long getLastChangedRowCount() {
+        return getThreadSession().getLastChangedRowCount();
+    }
 }

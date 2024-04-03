@@ -15,7 +15,7 @@
  */
 // modified from original source see README at the top level of this project
 /*
-** Modified to support SQLite extensions by the SQLite developers: 
+** Modified to support SQLite extensions by the SQLite developers:
 ** sqlite-dev@sqlite.org.
 */
 
@@ -920,6 +920,38 @@ public final class SQLiteSession {
                 mConnection = null;
             }
         }
+    }
+
+    /**
+     * Return the row ID of the last row to be inserted on this connection.  Note that the last row
+     * might not have been inserted on this particular statement, but the return value is the last
+     * row inserted on the same connection as that used by this statement.  The function checks that
+     * it is currently in a transaction before executing.  Because of this check, it is not
+     * necessary to acquire and release the connection: the connection has already been acquired.
+     * @hide
+     */
+    long getLastInsertRowId() {
+        throwIfNoTransaction();
+        return mConnection.getLastInsertRowId();
+    }
+    /**
+     * Return the number of database rows that were changed by the most recent SQL statement on
+     * this connection.
+     * @hide
+     */
+    long getLastChangedRowCount() {
+        throwIfNoTransaction();
+        return mConnection.getLastChangedRowCount();
+    }
+
+    /**
+     * Return the total number of database rows that were changed on the current connection, since
+     * it was created.
+     * @hide
+     */
+    long getTotalChangedRowCount() {
+        throwIfNoTransaction();
+        return mConnection.getTotalChangedRowCount();
     }
 
     private void throwIfNoTransaction() {
