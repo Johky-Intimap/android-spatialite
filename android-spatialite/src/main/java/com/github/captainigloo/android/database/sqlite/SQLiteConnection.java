@@ -171,9 +171,6 @@ public final class SQLiteConnection implements CancellationSignal.OnCancelListen
 
     private static native boolean nativeHasCodec();
     private static native void nativeLoadExtension(long connectionPtr, String file, String proc);
-    private static native int nativeLastInsertRowId(long connectionPtr);
-    private static native long nativeChanges(long connectionPtr);
-    private static native long nativeTotalChanges(long connectionPtr);
 
     public static boolean hasCodec(){ return nativeHasCodec(); }
 
@@ -1586,30 +1583,5 @@ public final class SQLiteConnection implements CancellationSignal.OnCancelListen
         private String getFormattedStartTime() {
             return sDateFormat.format(new Date(mStartTime));
         }
-    }
-    
-    /**
-     * Return the ROWID of the last row to be inserted under this connection.  Returns 0 if there
-     * has never been an insert on this connection.
-     * @return The ROWID of the last row to be inserted under this connection.
-     * @hide
-     */
-    long getLastInsertRowId() {
-        return nativeLastInsertRowId(mConnectionPtr);
-    }
-    /**
-     * Return the number of database changes on the current connection made by the last SQL
-     * statement
-     * @hide
-     */
-    long getLastChangedRowCount() {
-        return nativeChanges(mConnectionPtr);
-    }
-    /**
-     * Return the total number of database changes made on the current connection.
-     * @hide
-     */
-    long getTotalChangedRowCount() {
-        return nativeTotalChanges(mConnectionPtr);
     }
 }
