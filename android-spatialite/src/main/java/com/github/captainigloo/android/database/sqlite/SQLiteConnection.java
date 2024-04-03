@@ -1595,11 +1595,7 @@ public final class SQLiteConnection implements CancellationSignal.OnCancelListen
      * @hide
      */
     long getLastInsertRowId() {
-        try {
-            return nativeLastInsertRowId(mConnectionPtr);
-        } finally {
-            Reference.reachabilityFence(this);
-        }
+        return nativeLastInsertRowId(mConnectionPtr);
     }
     /**
      * Return the number of database changes on the current connection made by the last SQL
@@ -1607,21 +1603,13 @@ public final class SQLiteConnection implements CancellationSignal.OnCancelListen
      * @hide
      */
     long getLastChangedRowCount() {
-        try {
-            return nativeChanges(mConnectionPtr);
-        } finally {
-            Reference.reachabilityFence(this);
-        }
+        return nativeChanges(mConnectionPtr);
     }
     /**
      * Return the total number of database changes made on the current connection.
      * @hide
      */
     long getTotalChangedRowCount() {
-        try {
-            return nativeTotalChanges(mConnectionPtr);
-        } finally {
-            Reference.reachabilityFence(this);
-        }
+        return nativeTotalChanges(mConnectionPtr);
     }
 }
